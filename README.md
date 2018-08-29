@@ -1,7 +1,7 @@
 # Lambda Calculus Interpreter in Java using ANTLR4
 This is an implementation of Lambda Calculus using the following CFG:
 ```
-exprStar : expr SEMI 
+exprStart : expr SEMI 
   | expr LBRACKET NAME EQUALS expr RBRACKET
   | FREE LPAREN expr RPAREN
   | DEF NAME EQUALS expr
