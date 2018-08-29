@@ -115,12 +115,3 @@ SHOW : S H O W;
 DEFS : D E F S;
 NAME : VALID_ID_START VALID_ID_CHAR*;
 WS : [ \r\n\t]+ -> skip;
-//fragment E          : ('E'|'e') ;
-//fragment F          : ('F'|'f') ;
-//DEF : D E F;
-//White Space
-
-//lambda :
-//    DEF NAME EQUALS expr
-//  | expr;
-//
