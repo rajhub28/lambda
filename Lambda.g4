@@ -80,6 +80,10 @@ expr returns [LambdaNode value]:
     n.setChild2($e2.value);
     $value = n;
   }
+  | LPAREN e1=expr RPAREN
+  {
+    $value = $e1.value;
+  }
 ;
 
 fragment VALID_ID_START : ('a'..'z') | ('A'..'Z');
