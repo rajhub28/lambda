@@ -9,12 +9,12 @@ exprStar : expr SEMI
 ;
 
 expr :
-    num=NUMBER
-  | var=NAME
-  | LPAREN e1=expr e2=expr RPAREN
-  | LPAREN LAMBDA var=NAME e=expr RPAREN
-  | LPAREN oper=OP e1=expr e2=expr RPAREN
-  | LPAREN e1=expr RPAREN
+    NUMBER
+  | NAME
+  | LPAREN expr expr RPAREN
+  | LPAREN LAMBDA NAME expr RPAREN
+  | LPAREN OP expr expr RPAREN
+  | LPAREN expr RPAREN
 ;
 ```
 and the following lexical specification:
