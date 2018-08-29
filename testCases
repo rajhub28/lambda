@@ -1,0 +1,17 @@
+lambda1
+-------
+
+(lambda x (* x x))
+((lambda x (* x x)) 2)
+
+lambda 2
+--------
+
+(lambda x (lambda y (lambda z (* (x z) (y z)))))
+((( (lambda x (lambda y (lambda z (* (x z) (y z))))) (* x x)) (+ x x)) 5)
+
+lambda 3
+--------
+
+(lambda f (lambda x (f (f x))))
+(( (lambda f (lambda x (f (f x)))) (lambda x (* x (* x x)))) 2)

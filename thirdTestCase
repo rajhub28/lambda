@@ -1,0 +1,43 @@
+((((lambda f (lambda x ((f x) f))) (lambda y (lambda g (g (* y y))))) 2) (lambda a a))
+
+f <- lambda y.lambda g.(g (* y y))
+(( (lambda x (((lambda y (lambda g (g (* y y)))) x) (lambda y (lambda g (g (* y y)))))) 2) (lambda a a))
+
+y <- x
+(( (lambda x ( (lambda g (g (* x x))) (lambda y (lambda g (g (* y y)))))) 2) (lambda a a))
+
+g <- lambda y.lambda g. (g (* y y))
+(( (lambda x ((lambda y (lambda g (g (* y y)))) (* x x)) ) 2) (lambda a a))
+
+y <- (* x x)
+(( (lambda x (lambda g (g (* (* x x) (* x x)))) ) 2) (lambda a a))
+
+x <- 2
+((lambda g (g (* (* 2 2) (* 2 2)))) (lambda a a))
+
+g <- (lambda a a)
+( ((lambda a a) (* (* 2 2) (* 2 2))) )
+
+a <- (* (* 2 2) (* 2 2))
+(* (* 2 2) (* 2 2))
+
+16
+
+LAMBDA> 
+((((lambda f (lambda x ((f x) f))) (lambda y (lambda g (g (* y y))))) 2) (lambda a a));
+
+((((lambda f (lambda x ((f x) f))) (lambda y (lambda g (g (* y y))))) 2.0 ) (lambda a a)) 
+i=0
+
+(((lambda x (((lambda y (lambda g (g (* y y)))) x) (lambda y (lambda g (g (* y y )))))) 2.0) (lambda a a)) 
+i=1
+
+((((lambda y (lambda g (g (* y y)))) 2.0) (lambda y (lambda g (g (* y y))))) (lambda a a )) 
+i=2
+
+(((lambda g (g (* 2.0 2.0))) (lambda y (lambda g (g (* 2.0 2.0))))) (lambda a a)) 
+i=3
+
+( ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y ( lambda g ( ( lambda y (
+...
+...
